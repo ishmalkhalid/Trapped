@@ -1,0 +1,95 @@
+html{
+  scroll-behavior: smooth; /*smooth scrolling for the page*/
+}
+body{
+  box-sizing: border-box;
+  margin: 0 0;
+  font-family: "Poppins","Lato", Arial, Helvetica,sans-serif; /*fonts used*/
+  background-color: #110f10;
+  color: white;
+}
+/*start of creating a row and column based layout similar to bootstrap*/
+.row{display: flex;}
+.wrap{flex-wrap: wrap;}
+/*number after the word 'column' indicates the ratio of the full page width to the column's width*/
+.column1{
+  width: 100%;
+}
+.column2{
+  width: 50%;
+}
+.column3{
+  width: 33.3333%;
+}
+.column3Bar{
+  width: 66.6667%;
+}
+.column4{
+  width: 25%;
+}
+.column5{
+  width: 20%;
+}
+.column6{
+  width: 16.6667%;
+}
+.column8{
+  width: 12.5%;
+}
+.column10{
+  width: 10%;
+}
+.column12{
+  width: 8.3333%;
+}
+/*end of creating a row and column based layout similar to bootstrap*/
+
+/*class to clear after floats*/
+.clear{
+  content: "";
+  display: table;
+  clear: both;
+}
+/*class to add left margin of 40px to an element*/
+.margin-lt-40{
+  margin-left: 40px;
+}
+
+/*class for keeping the image in responsive design for different screensizes*/
+.image-fluid{
+  max-width: 100%;
+  height: auto;
+}
+
+/*classes for text transformation and styling*/
+.mutedText{
+  color: #aaa;
+}
+.uCaseText{
+  text-transform: uppercase;
+}
+.lCaseText{
+  text-transform: lowercase;
+}
+.capitalText{
+  text-transform: capitalize;
+}
+.text-center{
+  text-align: center;
+}
+.titleText{
+  user-select: none;
+  font-size: 3em;
+  font-weight: bold;
+}
+.text-shadow{
+  text-shadow: 2px 2px 1px black;
+}
+/*class for inline display*/
+.inline-display{
+  display: inline;
+}
+/*class for white color*/
+.white{color: white;}
+/* class for setting display to none */
+.displayNone{display: none;}

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trapped</title>
+    <link rel="stylesheet" href="basicStyles.css"> <!--general stylesheet-->
+    <link rel="stylesheet" href="indexStyles.css"> <!--index page stylesheet-->
+    <link rel="stylesheet" href="menu.css"><!--menu stylesheet-->
+    <link rel="stylesheet" href="formStyle.css"><!--contact form stylesheet-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--stylesheet for icons-->
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--./fonts-->
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/alexa_mini.png">
+    <!-- ./favicon -->
+
+    <!-- aos animation library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  </head>
+
+  <body id="body">
+
+    <!-- preloader of the webpage -->
+    <section id="preloader">
+      <div class="center">
+        <h1 class="uCaseText text-center" data-aos="zoom-in" data-aos-duration="1000" id="preloaderText">proceed at your own risk</h1>
+        <p class="capitalText text-center"  data-aos="zoom-in" data-aos-duration="1000" id="preloaderCaption">click if you dare</p>
+      </div>
+    </section>
+    <!-- ./preloader of the webpage -->
+
+    <!-- navigation bar  -->
+    <div class="topnav navBarShadow" id="myTopnav">
+      <!-- Navigation links - hidden by default -->
+      <div id="myNav" class="overlay">
+           <!-- Overlay content: navigation links-->
+           <div class="overlay-content">
+             <a href="#landingSection"  onclick="javascript:closeNav()">Home</a>
+             <a href="#movieSection"  onclick="javascript:closeNav()">Watch the Movie</a>
+             <a href="#teamSection"  onclick="javascript:closeNav()">Meet the Team</a>
+             <a href="#storeSection"  onclick="javascript:closeNav()">Store</a>
+             <a href="#contactSection" onclick="javascript:closeNav()">Contact Us</a>
+           </div>
+        </div>
+        <!-- ./Overlay content: navigation links-->
+      </div>
+    <!-- ./navigation bar -->
+
+    <!-- alexa sidebar-->
+    <div id="mySidenav" class="sidenav">
+      <!-- button to close alexa -->
+      <a href="javascript:void(0)" class="closebtn" id="closeAlexa" onclick="closeAlexa()">&times;</a>
+      <!-- alexa options -->
+      <p id="muteBG">Alexa mute the sound</p>
+      <p id="toggleDark">Alexa turn on Light Mode</p>
+    </div>
+    <!-- ./alexa sidebar -->
+
+    <!-- landing content -->
+    <section id="landingSection">
+      <div class="row">
+
+        <!-- left side of landing section -->
+        <div class="column2 landingColumns" id="landingIntro">
+          <div class="row">
+            <div class="column1" id="logoWrapper">
+              <!-- logo -->
+              <a href="#landingSection"><img src="images/logo_mini.png" alt="movieLogo" class="image-fluid" id="logo"></a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="column1" id="logoWrapper">
+              <!-- caption under logo -->
+              <p class="tagline mutedText uCaseText ml3" id="movCap">A modern day haunting</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="column1">
+              <!-- landing content heading -->
+              <h1 class="sideHeading uCaseText ml31" id="plotHead">the plot</h1>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="column1">
+              <!-- description of the plot -->
+              <p id="plotLine" class="ml32">Do you feel clustered by the voices that are binary? Is the help you get, really helping you? Do you control all that you think you do?
+                Watch the story of Ishmal who loves to exploit her devices. Not does she know, she is actually Trapped.</p>
+            </div>
+          </div>
+
+          <!-- icons to navigate to page sections from landing section-->
+          <div class="iconsWrapper">
+            <div class="row">
+              <div class="column1 iconWrapper">
+                <p class="uCaseText inline-display iconText mutedText ml33" id="movieIconText">watch the movie</p>
+                <a href="#movieSection"><i id="watchMovieIcon" class="fa fa-angle-right scaleZero"></i></a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column1">
+                <p class="uCaseText inline-display iconText mutedText ml34" id="castIconText">meet the team</p>
+                <a href="#teamSection"><i id="meetCastIcon" class="fa fa-angle-right scaleZero"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- ./icons to navigate to page sections from landing section-->
+
+        </div>
+
+        <!-- right side of landing section -->
+        <div class="column2 landingColumns" id="landingSlideshow">
+
+          <div class="row wrap">
+            <div class="column1">
+              <!-- menu/navigation bar icon -->
+              <svg class="menuIcon menuLinesRotate menuIconPathWrapper" viewBox="0 0 100 100" width="80" id="menuIcon">
+                <path id="line1"
+                      class="line top"
+                      d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+                <path id="line2"
+                      class="line middle"
+                      d="m 70,50 h -40" />
+                <path id="line3"
+                      class="line bottom"
+                      d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+              </svg>
+            </div>
+            <div class="column1">
+              <!-- icon for alexa -->
+              <img src="images/alexaIcon.png" alt="alexaIcon" class="image-fluid" id="alexaIcon" onclick="openAlexa()">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="column1">
+              <!-- image for landing section -->
+              <img src="images/techGhost.png" alt="three ghosts" class="image-fluid" id="heroImage">
+              <!-- <img src="images/doNotEnter_mini.png" alt="do not enter" class="image-fluid" id="warningImage"> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- background music audio file -->
+      <audio id="horrorBgSound" src="sounds/horrorBg.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+
+    </section>
+    <!-- ./ landing content -->
+
+    <!-- section for movie -->
+    <section id="movieSection">
+      <div class="row">
+        <div class="column1">
+          <!-- title for movie section -->
+          <h1 class="text-center uCaseText titleText text-shadow" id="movieTitle">be prepared!</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column1">
+          <!-- video for movie section -->
+          <div id="videoWrapper">
+            <video id="finalMovie" class="vidCenter">
+              <!-- MP4 must be first for iPad! -->
+              <source src="videos/movie_FF.mp4" type="video/mp4"> 
+            </video>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- custom video controls -->
+      <div id="videoControls">
+        <div class="row">
+          <div class="column6 text-center">
+            <i class="fa fa-play" id="playBtn"></i>
+          </div>
+          <div class="column6 text-center">
+            <i class="fa fa-pause" id="pauseBtn"></i>
+          </div>
+          <div class="column6 text-center">
+            <i class="fa fa-volume-up" id="volUpBtn"></i>
+          </div>
+          <div class="column6 text-center">
+            <i class="fa fa-volume-down" id="volDownBtn"></i>
+          </div>
+          <div class="column6 text-center">
+            <i class="fa fa-volume-off" id="muteBtn"></i>
+          </div>
+          <div class="column6 text-center">
+            <i class="fa fa-expand" id="fullScrBtn"></i>
+          </div>
+        </div>
+      </div>
+      <!-- ./custom video controls -->
+
+    </section>
+    <!-- ./ section for movie -->
+
+    <!-- team section -->
+    <section id="teamSection">
+      <div class="row">
+
+        <!-- images for team members on the left side-->
+        <div class="column2 img-column landingColumns">
+          <img src="images/team/ishmal.jpg" alt="leadActor" id="leadActor" class="image-fluid teamImages">
+          <img src="images/team/ayesha.png" alt="supportingActor" id="supportingActor" class="image-fluid teamImages displayNone">
+          <img src="images/team/hasin1.jpeg" alt="techPerson" id="techPerson" class="image-fluid teamImages displayNone">
+          <img src="images/team/anas.jpeg" alt="creative" id="creative lead" class="image-fluid teamImages displayNone">
+        </div>
+
+        <!-- team member details on the right side -->
+        <div class="column2 landingColumns">
+
+          <div class="row">
+            <div class="column1" id="teamHeadingWrapper"><!--heading for team section-->
+              <p class="tagline mutedText uCaseText ml3" id="teamTitle">the team</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="column1">
+              <!-- role of team member -->
+              <h1 id="teamRole" class="sideHeading uCaseText ml31">lead actor</h1>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="column1">
+              <!-- description of teammate -->
+              <p id="castDesc" class="castDesc" class="ml32">Ishmal is a sophomore (Class of 2023), majoring in Computer Science.She loves acting, and her skills lend her the leading role in the movie! She is also a fan of horror movies - today she knows how it is to be in one of them!</p>
+            </div>
+          </div>
+
+          <!-- social media links and icons for teammates -->
+          <div class="row">
+            <div class="column1">
+              <div class="socialMediaWrapper">
+                <a class="icon" href="https://github.com/" id="github" target="blank">
+                  <i class="fa fa-github"></i>
+                </a>
+                <a class="icon" href="https://instagram.com/" id="instagram" target="blank">
+                  <i class="fa fa-instagram"></i>
+                </a>
+                <a class="icon" href="https://facebook.com/" id="facebook" target="blank">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ./social media links and icons for teammates -->
+
+          <!-- icons for team members carousel -->
+          <div class="iconsWrapper" id="sliderIconsWrapper">
+            <div class="row">
+              <div class="column1">
+                <div class="iconWrapper" id="sliderIcons">
+                  <span><i id="prevTeam" class="fa fa-angle-left"></i></span>
+                  <span><i id="nextTeam" class="fa fa-angle-right"></i></span>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- ./ icons for team members carousel -->
+
+      </div>
+    </section>
+    <!-- ./team section -->
+
+    <!-- section for movie store -->
+    <section id="storeSection">
+
+      <div class="row">
+        <div class="column1">
+          <!-- heading for store section -->
+          <h1 class="text-center uCaseText titleText text-shadow" id="storeTitle">Movie Merchandise</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column2">
+          <!-- cart for store -->
+          <h1 id="currCart" class="text-center uCaseText text-shadow">Cart: Empty</h1>
+        </div>
+        <div class="column2">
+          <!-- total bill for store -->
+          <h1 id="currTotal" class="text-center uCaseText text-shadow">Total: $0</h1>
+        </div>
+      </div>
+
+      <!-- products in store -->
+      <div class="row productRow">
+
+        <!-- product item -->
+        <div class="column3 productItemWrapper">
+          <div class="productItem" id="prod1i">
+            <h3 class="itemName" id="prod1b">Sweatshirt(SS)</h3>
+            <img src="images/product1.png" alt="" class="prodImg image-fluid">
+            <p class="itemPrice" id="prod1c">$120</p>
+            <p class="cartButton" id="cart1">Add To Cart</p>
+          </div>
+        </div>
+        <!-- ./product item -->
+
+        <!-- product item -->
+        <div class="column3 productItemWrapper">
+          <div class="productItem" id="prod2i">
+            <h3 class="itemName" id="prod2b">T-Shirt(TS)</h3>
+            <img src="images/product2.png" alt="" class="prodImg image-fluid">
+            <p class="itemPrice"  id="prod2c">$70</p>
+            <p class="cartButton" id="cart2">Add To Cart</p>
+          </div>
+        </div>
+        <!-- ./product item -->
+
+        <!-- product item -->
+        <div class="column3 productItemWrapper">
+          <div class="productItem" id="prod3i">
+            <h3 class="itemName"  id="prod3b">Cap(C)</h3>
+            <img src="images/product3.png" alt="" class="prodImg image-fluid">
+            <p class="itemPrice"  id="prod3c">$50</p>
+            <p class="cartButton" id="cart3">Add To Cart</p>
+          </div>
+        </div>
+        <!-- ./product item -->
+
+      </div>
+
+      <!-- button to checkout -->
+      <div class="row">
+        <div class="column1">
+          <p class="cartButton" id="checkoutBtn">Checkout</p>
+        </div>
+      </div>
+      <!-- ./ button to checkout -->
+
+    </section>
+    <!-- section for movie store -->
+
+    <!-- contact section -->
+    <section id="contactSection">
+
+      <div class="row">
+        <div class="column1">
+          <h1 class="text-center uCaseText titleText text-shadow" id="contactTitle">send us a message</h1>
+          <p class="text-center mutedText" id="alexaInstruction">Click on Alexa to start chatting</p>
+        </div>
+      </div>
+
+      <div id="chat-container">
+        <div class="row wrap">
+          <div class="column2">
+
+            <div class="row">
+              <div class="column1">
+                <div id="alexaIntroWrapper">
+                  <h1>Alexa:</h1>
+                  <div class="typewriter">
+                    <h1 id="alexaIntro">Hello, I am Alexa. What is your name?</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column1">
+                <div id="alexaEmailWrapper" class="addedMarginChat">
+                  <h1>Alexa:</h1>
+                  <div class="typewriter">
+                    <h1 id="alexaEmail">What is your email?</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column1">
+                <div id="alexaMessageWrapper" class="addedMarginChat">
+                  <h1>Alexa:</h1>
+                  <div class="typewriter">
+                    <h1 id="alexaMessage">What is your message?</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="column2">
+
+            <div class="row">
+              <div class="column1">
+                <input id="nameInput" class="input" placeholder="Your Name (Press enter to continue)" type="text" >
+                <span class="underline"></span>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column1">
+                <input id="emailInput" class="input" placeholder="Your Email (Press enter to continue)" type="text" >
+                <span class="underline"></span>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column1">
+                <input id="messageInput" class="input" placeholder="Your Message (Press enter to submit)" type="text" >
+                <span class="underline"></span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="column1">
+              <div id="alexaThanksWrapper" class="addedMarginChat">
+                <h1>Alexa:</h1>
+                <div class="typewriter">
+                  <h1 id="alexaThanks">Thank you XYZ, your message has been received!</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column1">
+          <div id="alexaImgWrapper">
+            <img src="images/alexa_mini.png" alt="" class="image-fluid" id="alexaImg">
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- ./contact section -->
+
+    <!-- button to scroll to top of page -->
+    <button onclick="scrollToTop();" id="scrollTop" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
+  </body>
+
+  <!-- script for aos animation library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script><!-- script for text animation from tobiasahlin.com/movingletters -->
+  <script src="scripts/animateIcon.js" charset="utf-8"></script><!-- script to animate text accompanying navigation icons in landing section-->
+  <script src="scripts/menu.js" charset="utf-8"></script><!--script to manage opening and closing of menu/navigation-->
+  <script src="scripts/textAnimate.js" charset="utf-8"></script><!--script to animate text from tobiasahlin.com/movingletters-->
+  <script src="scripts/preloader.js" charset="utf-8"></script><!--script to hide preloader-->
+  <script src="scripts/videoPlay.js" charset="utf-8"></script><!--script for custom video controls-->
+  <script src="scripts/teamSlideshow.js" charset="utf-8"></script><!--script for team carousel-->
+  <script src="scripts/purchase.js" charset="utf-8"></script><!--script for merchandise shop-->
+  <script src="scripts/scrollTop.js" charset="utf-8"></script><!--script for scroll to top button-->
+  <script src="scripts/alexaChat.js" charset="utf-8"></script><!--script for contact section for alexa-->
+  <script src="scripts/alexa.js" charset="utf-8"></script><!--script for alexa side bar-->
+
+
+</html>

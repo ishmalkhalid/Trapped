@@ -1,0 +1,614 @@
+/* padding for different sections */
+#movieSection,#storeSection,#contactSection{
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+/* style the preloader and position it at the top of other sections */
+#preloader{
+  font-family: 'lucida console',serif;
+  font-size: 3em;
+  position: fixed;
+  z-index: 10000;
+  background-color: #110f10;
+  color: darkgreen;
+  user-select: none;
+  height: 100vh;
+  width: 100%;
+}
+/* animate the text of preloader */
+#preloaderText{
+  animation: 2s blink ease-in infinite;
+  margin: 20px 0;
+}
+@keyframes blink {
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+}
+#preloaderCaption{
+  font-size: 0.7em;
+}
+/* responsiveness setting for preloader on smaller screens */
+@media (max-width:998px) {
+  #preloader{font-size: 2em;}
+}
+/* class to center an element vertically through absolute positioning */
+.center{
+  position: absolute;
+  width: 100%;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+
+
+/*///////////////////////*/
+/*LANDING SECTION STYLES*/
+/*///////////////////////*/
+#landingSection{
+  display: none;
+  padding: 2rem 3rem 0;
+}
+/*style the logo and the text*/
+#logo{
+  width: 40%;
+}
+.tagline{
+  font-size: 1.2em;
+  font-weight: bold;
+  user-select: none;
+}
+.sideHeading{
+  font-size: 3.5em;
+  font-weight: bolder;
+  margin: 15px 0;
+  user-select: none;
+}
+#plotLine{
+  text-align: justify;
+  margin-top: 10px;
+  color: #eee;
+  padding-right: 80px;
+  line-height: 30px;
+}
+/*style the navigation icons in landing section*/
+.fa-angle-right{
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 100px;
+  margin: 5px 2px;
+  transition: 0.25s ease-in;
+}
+.fa-angle-left{
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 100px;
+  margin: 5px 2px;
+  transition: 0.25s ease-in;
+}
+.fa {
+  padding: 15px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.fa-angle-right:hover{
+  color: #110f10;
+  background-color: white;
+}
+.fa-angle-left:hover{
+  color: #110f10;
+  background-color: white;
+}
+#watchMovieIcon,#meetCastIcon{
+  font-size: 20px;
+  margin-left: 20px;
+  transition: 0.25s ease-in;
+  transition: transform 1.75s ease-in;
+}
+.scaleZero{
+  transform: scale(0);
+}
+.scaleNormal{
+  transform: scale(1);
+}
+.iconText{
+  font-size: 1.2em;
+  user-select: none;
+  transition: 0.25s ease-in;
+}
+.iconsWrapper{
+  margin-top: 30px;
+}
+
+/*style the image in landing section*/
+#heroImage{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* #warningImage{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* transform: translateY(100%); */
+  /* z-index: 2; */
+/* } */
+/* #warningImage {
+	position: absolute;
+	top: 55%;
+	left: 65%;
+	transform: translate(-50%,-50%);
+  transform: rotate(-30deg);
+	z-index: 2;
+	width: 20%;
+  animation: blink 4s ease-in infinite;
+}*/
+
+/*responsiveness settings for landing section on different screen sizes*/
+@media (max-width:998px) {
+  #plotHead{
+    font-size: 2.5em;
+  }
+  .tagline{font-size: 1em;}
+  #watchMovieIcon, #meetCastIcon {
+  	font-size: 15px;
+  	margin-left: 10px;
+  }
+  #heroImage{
+    width: 80%;
+  }
+  .fa {
+  	padding: 10px;
+  	width: 15px;
+  }
+  .iconsWrapper {
+  	margin-top: 10px;
+  }
+}
+@media (max-width:792px) {
+  #plotHead{
+    font-size: 1.5em;
+  }
+  #watchMovieIcon, #meetCastIcon {
+  	margin-left: 0;
+  }
+  #heroImage{
+    width: 100%;
+    min-width: 70%;
+  }
+  #plotLine{padding: 0;}
+  .menuIcon{left: 80%;}
+  #alexaIcon{
+    width: 15% !important;
+    left: 85% !important;
+  }
+  .landingColumns{
+    min-width: 300px;
+  }
+}
+
+
+
+
+/*/////////////////////*/
+/*MOVIE SECTION STYLES*/
+/*/////////////////////*/
+#movieSection{
+  width: 100%;
+  background-color: #444;
+}
+/*style the container element of the video*/
+#videoWrapper{
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.vidCenter{
+  display: block;
+  margin: 0 auto;
+}
+/*set dimensions for the video*/
+#finalMovie{
+  height: auto;
+  width: 800px;
+}
+/*responsiveness settings for video on different screen sizes*/
+@media (max-width:768px) {
+  #finalMovie{
+    height: auto;
+    width: 500px;
+  }
+}
+@media (max-width:600px) {
+  #finalMovie{
+    height: auto;
+    width: 425px;
+  }
+}
+/* title for video section */
+#movieTitle{
+  margin: 20px auto 20px;
+}
+/* style the custom video controls */
+#videoControls{
+  margin: 0 auto;
+}
+#videoControls i{
+  font-size: 2em;
+  cursor: pointer;
+  color: #ddd;
+}
+#videoControls i:hover{
+  transform: scale(1.05);
+}
+/* responsiveness settings for custom video controls on different screensizes */
+@media (min-width:992px) {
+  #videoControls{
+    max-width: 900px;
+  }
+}
+@media (min-width:768px) {
+  #videoControls{
+    max-width: 720px;
+  }
+}
+@media (min-width:600px) {
+  #videoControls{
+    max-width: 540px;
+  }
+}
+/* responsiveness for movie title font on smaller screens */
+@media (max-width:768px) {
+  #movieTitle{
+    font-size: 2em;
+  }
+}
+
+/*////////////////////*/
+/*TEAM SECTION STYLES*/
+/*//////////////////*/
+#teamSection{
+  padding: 1rem 3rem 1rem;
+}
+/* style the text in the team section */
+#teamHeadingWrapper .tagline{
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.castDesc{
+  text-align: justify;
+  margin-top: 10px;
+  color: #eee;
+  padding-right: 80px;
+  line-height: 30px;
+  min-height: 150px;
+}
+/* style the icons for the team carousel */
+.icon{
+  color:#aaa;
+  display: inline;
+  font-size: 2em;
+}
+.icon i{
+  cursor: pointer;
+}
+.icon i:hover{
+  color: #fff;
+}
+#sliderIconsWrapper{
+  margin-top: 10px;
+}
+#prevTeam{
+  cursor: pointer;
+}
+#nextTeam{
+  cursor: pointer;
+}
+/* style the image of the team member */
+.img-column{
+  margin: 2rem 0;
+}
+.img-column img{
+  width: 90%;
+}
+.teamImages{
+  position: relative;
+  transform: translateX(-110%);
+  transition-duration: 0.4s;
+}
+/* responsiveness settings for team section on different screen sizes */
+@media (max-width:998px) {
+  #teamTitle{
+    font-size: 1em !important;
+  }
+  #teamRole{font-size: 2.5em;}
+  #castDesc{
+    padding-right: 0;
+  }
+  #leadActor{min-width: 95%;}
+}
+@media (max-width:768px) {
+  #teamRole{font-size: 1.5em;}
+}
+
+/*///////////////////////*/
+/*CONTACT SECTION STYLES*/
+/*/////////////////////*/
+#contactSection{
+    width: 100%;
+    background-color: #110f10;
+}
+/* style the text of the contact section */
+#contactTitle{
+  margin: 20px auto 10px;
+}
+#alexaIntroWrapper h1,#alexaEmailWrapper h1,
+#alexaMessageWrapper h1,#alexaThanksWrapper h1{
+  font-size: 18px;
+}
+#alexaInstruction{
+  margin-top: 0;
+  user-select: none;
+  font-size: 1.2em;
+}
+/* style the image of alexa in the contact section */
+#alexaImgWrapper{margin-top: 30px;}
+#alexaImg{
+  width: 20%;
+  margin: 0 auto;
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+/* style the chat with alexa */
+#chat-container{
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+/* selector for typewriting effect */
+.typewriter h1 {
+  overflow: hidden;
+  border-right: .15em solid white;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end;
+}
+/* margin for specific chat elements */
+.addedMarginChat{
+  margin-top: 40px;
+}
+/* typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+/* typewriter cursor animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+/* hiding all chat elements from display until the user decides to send a message */
+#chat-container,#alexaIntroWrapper,#alexaEmailWrapper,
+#alexaMessageWrapper,#alexaThanksWrapper,
+#nameInput,#emailInput,#messageInput{
+  display: none;
+}
+/* responsiveness design for contact section for different screen sizes */
+@media (max-width:998px) {
+  #contactTitle{font-size: 2.5em;}
+  .typewriter h1{
+    overflow: visible;
+  }
+}
+@media (max-width:768px) {
+  #contactTitle{font-size:2em; }
+  /* .addedMarginChat{margin-top: 80px;} */
+}
+
+
+
+
+/*/////////////////////*/
+/*STORE SECTION STYLES*/
+/*////////////////////*/
+#storeSection{
+  width: 100%;
+  background-color: #444;
+}
+/**************************/
+/*product card styles start*/
+/************************/
+
+/*set padding, width and margin of product card*/
+.productItemWrapper{
+  padding: 10px;
+  margin-top: 20px;
+}
+/*change hover state of product card*/
+.productItemWrapper:hover{
+  transform: scale(1.05);
+}
+.productItem{
+  border: 1px solid black;
+  cursor: default;
+  background-color: #110f10;
+}
+/*style product card content*/
+.itemName{
+  font-size: 1.5em;
+  color: #fff;
+}
+.itemName,.itemPrice{
+  text-align: center;
+}
+.itemPrice{
+  font-size: 1.4em;
+  margin: 5px 0;
+  color: #fff;
+}
+.prodImg{
+  width: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/*style "add to cart" button*/
+.cartButton {
+  position: relative;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  transition-duration: 0.6s;
+  color: white;
+  border: 2px solid #fff;
+  margin-right: 10px;
+  margin: 0 0 10px 0;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+/* style the check out button */
+#checkoutBtn{margin-top: 10px;}
+/*change hover state of "add to cart" button*/
+.cartButton:hover{
+  background-color: #fff;
+  border: 2px solid #080F0F;
+  color: #080F0F;
+}
+/* style the title of store section */
+#storeTitle{
+  margin: 20px auto 10px;
+}
+/* responsiveness settings for different screensizes */
+@media (max-width:998px) {
+  #storeTitle{
+    font-size: 2.5em;
+  }
+}
+@media (max-width:768px) {
+  #storeTitle{
+    font-size: 2em;
+  }
+  #currCart,#currTotal{font-size: 1em;}
+  .itemName,.itemPrice{font-size: 1em;}
+  .cartButton{padding: 10px 15px;}
+}
+@media (max-width:500px) {
+  .cartButton {
+  	padding: 5px 5px;
+  }
+}
+
+
+/*/////////////*/
+/*OTHER STYLES*/
+/*///////////*/
+
+/*style the button for scrolling to top*/
+#scrollTop{
+  position: fixed;
+  bottom: 35px;
+  right: 8px;
+  z-index: 998;
+  display: none;
+  border: none;
+  outline: none;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  cursor: pointer;
+  padding: 15px 15px;
+  margin: 10px 10px;
+  border-radius: 50%;
+  font-size: 23px;
+}
+
+
+/* alexa sidebar icon style*/
+#alexaIcon{
+  width: 10%;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  left: 90%;
+  z-index: 997;
+  margin-top: 10px;
+}
+
+/* style alexa sidebar */
+.sidenav {
+ height: 100%;
+ width: 0;
+ position: fixed;
+ z-index: 1020;
+ top: 0;
+ right: 0;
+ background-color: #111;
+ overflow-x: hidden;
+ padding-top: 60px;
+ transition: 0.5s;
+}
+
+/* alexa sidebar options styles */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav p {
+ padding: 8px 8px 8px 32px;
+ text-decoration: none;
+ font-size: 25px;
+ color: #818181;
+ display: block;
+ transition: 0.3s;
+ cursor: pointer;
+ user-select: none;
+}
+.sidenav p:hover {
+ color: #f1f1f1;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+/*style the close button for alexa sidebar */
+.sidenav .closebtn {
+ position: absolute;
+ top: 0;
+ right: 25px;
+ font-size: 36px;
+ margin-left: 50px;
+}
+
+/* responsiveness for alexa sidebar */
+@media screen and (max-height: 450px) {
+ .sidenav {padding-top: 15px;}
+ .sidenav a {font-size: 18px;}
+}
+
+/*class for inverting the color of an element*/
+.invert{filter:invert(1);}

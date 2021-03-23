@@ -1,0 +1,47 @@
+/* style the input form field */
+.input {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #CCC;
+	color: #fff;
+	box-sizing: border-box;
+	font-family: "Poppins", "Lato", Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	height: 36px;
+	left: 50%;
+	padding: 0px 0px;
+	position: relative;
+	transform: translateX(-50%);
+	margin-top: 80px;
+}
+/* style the focus class of input form field */
+.input:focus {
+  outline: none;
+}
+/* style the placeholder color for input field */
+input::-webkit-input-placeholder {
+  color: #AAA;
+}
+/* style the placeholder color for input field in focus*/
+input:focus::-webkit-input-placeholder {
+  color: dodgerblue;
+}
+/* style the underline of the focused input field */
+.input:focus + .underline {
+  transform: scale(1);
+}
+/* create an underline under the input field */
+.underline {
+  background-color: dodgerblue;
+  display: inline-block;
+  height: 2px;
+  left: 50px;
+  margin-top: -4px;
+  position: absolute;
+  top: 185px;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  width: 202px;
+}
